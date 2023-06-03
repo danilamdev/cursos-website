@@ -2,7 +2,11 @@
 const { size, responsive } = Astro.props;
 ---
 
-<p class=`font-semibold text-${size} ${responsive ? 'lg:text-xl' : ''}`>
-  <span class="text-blue-500">Carlos.</span>
-  <span class="text-white">Lambarri.</span>
-</p>
+<a href="#hero">
+  <p
+    class=`font-semibold text-${size} ${responsive ? 'lg:text-xl xl:text-2xl' : ''}`
+  >
+    <span class="text-blue-500">Carlos.</span>
+    <span class="text-white">Lambarri.</span>
+  </p>
+</a>
