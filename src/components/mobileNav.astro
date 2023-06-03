@@ -3,29 +3,31 @@ import Menu from "./icons/Menu.astro";
 import Close from "./icons/Close.astro";
 ---
 
-<label for="menu-btn" class="menu-btn">
-  <div class="text-slate-50 w-9">
-    <Menu />
-  </div>
-</label>
+<div class="lg:hidden">
+  <label for="menu-btn" class="menu-btn">
+    <div class="text-slate-50 w-9">
+      <Menu />
+    </div>
+  </label>
 
-<input type="checkbox" id="menu-btn" hidden />
+  <input type="checkbox" id="menu-btn" hidden />
 
-<nav
-  class="navbar hidden fixed top-0 right-0 bg-slate-100 h-full w-2/3 pt-52 rounded-s-3xl"
->
-  <div class="text-slate-500 close-btn absolute top-5 right-8 w-9 z-50">
-    <Close />
-  </div>
-  <ul
-    class="flex flex-col items-end gap-y-5 text-2xl pr-10 [&>li]:py-8 text-slate-700"
+  <nav
+    class="navbar hidden fixed top-0 right-0 bg-slate-100 h-full w-2/3 pt-52 rounded-s-3xl"
   >
-    <li><a href="#">HOME</a></li>
-    <li><a href="#">CURSOS</a></li>
-    <li><a href="#">QUIEN SOY</a></li>
-    <li><a href="#">CONTACTO</a></li>
-  </ul>
-</nav>
+    <div class="text-slate-500 close-btn absolute top-5 right-8 w-9 z-50">
+      <Close />
+    </div>
+    <ul
+      class="flex flex-col items-end gap-y-5 text-2xl pr-10 [&>li]:py-8 text-slate-700"
+    >
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">CURSOS</a></li>
+      <li><a href="#">QUIEN SOY</a></li>
+      <li><a href="#">CONTACTO</a></li>
+    </ul>
+  </nav>
+</div>
 
 <style>
   input[type="checkbox"]:checked ~ nav {
