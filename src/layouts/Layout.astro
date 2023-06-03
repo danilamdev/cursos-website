@@ -22,15 +22,13 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="font-poppins w-screen h-screen bg-cover bg-no-repeat bg-top">
+	<body
+		class="font-poppins bg-[url('/back.webp')] w-screen h-screen bg-cover bg-no-repeat bg-top"
+	>
 		<div class="hero w-screen h-screen bg-[#061858]/70 flex items-center">
 			<slot />
 		</div>
 	</body>
 </html>
-<style>
-	body {
-		background-image: url("back.webp");
-	}
-</style>
+<style></style>
 <style is:global></style>
