@@ -1,0 +1,29 @@
+---
+const { currentPath } = Astro.props;
+
+const navLinks = {
+  "/": { href: "/", title: "HOME" },
+  "/cursos": { href: "/cursos", title: "CURSOS" },
+  "/sobre-mi": { href: "/sobre-mi", title: "SOBRE MI" },
+};
+
+const isActive = currentPath;
+---
+
+<div class="hidden lg:block">
+  <ul
+    class="flex items-center text-md text-slate-200 gap-x-10 xl:text-lg 2xl:gap-x-14"
+  >
+    {
+      Object.entries(navLinks).map(([path, link]) => {
+        return (
+          // <li><a href="/" class="">HOME</a></li>
+          // <li><a href="/cursos" class="">CURSOS</a></li>
+          // <li><a href="/sobre-mi" class="">QUIEN SOY</a></li>
+          // <li><a href="#" class="border border-blue-500 p-3">CONTACTO</a></li>
+          <p>hola</p>
+        );
+      })
+    }
+  </ul>
+</div>

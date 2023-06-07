@@ -1,20 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MobileNav from "../components/mobileNav.astro";
-import Logo from "../components/logo.astro";
 ---
 
 <Layout title="Cursos | Carlos Lambarri" />
-<header class="fixed w-full">
-	<div
-		class="flex justify-between w-11/12 max-w-7xl mx-auto items-center py-4 px-4"
-	>
-		<Logo size="md" responsive />
-		<nav>
-			<MobileNav />
-		</nav>
-	</div>
-</header>
 
 <section
 	id="hero"
@@ -22,10 +10,10 @@ import Logo from "../components/logo.astro";
 >
 	<div class="w-full h-full bg-[#061858]/80 flex items-center">
 		<div
-			class="md:w-full pl-10 flex flex-col items-start gap-y-4 h-96 lg:mx-auto lg:w-full lg:max-w-7xl lg:h-[450px] xl:h-[650px] xl:p-0"
+			class="md:w-full pl-10 flex flex-col items-start gap-y-4 h-96 lg:mx-auto lg:w-full lg:max-w-[1700px] lg:h-[450px] xl:h-[650px] xl:px-20"
 		>
 			<h2
-				class="text-white text-5xl font-semibold md:w-10/12 xl:w-2/3 lg:text-7xl xl:text-8xl"
+				class="text-white text-5xl font-semibold md:w-10/12 xl:w-2/3 lg:text-7xl xl:text-9xl"
 			>
 				Cursos de extensión universitaria
 			</h2>
@@ -35,7 +23,7 @@ import Logo from "../components/logo.astro";
 				50 años de trayectoria en el campo de la tecnología de la información
 			</p>
 			<a
-				class="text-white bg-blue-600 mt-auto px-6 py-4 text-sm lg:text-lg xl:text-xl"
+				class="text-white bg-blue-600 mt-auto px-6 py-4 text-sm lg:text-lg xl:text-2xl"
 				href="#">Conoce más</a
 			>
 		</div>
