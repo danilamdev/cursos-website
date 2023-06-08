@@ -25,6 +25,7 @@ const currentPath = url.pathname;
 			href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:wght@400;600;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="preload" href="/back.webp" as="image" />
 		<meta charset="UTF-8" />
 		<meta
 			name="description"
@@ -36,7 +37,7 @@ const currentPath = url.pathname;
 		<title>{title}</title>
 	</head>
 	<body class="font-poppins">
-		<header class="fixed top-0 w-full lg:py-5">
+		<header class="web-header fixed top-0 w-full lg:py-2">
 			<div
 				class="flex justify-between w-11/12 max-w-screen-2xl mx-auto items-center py-4 px-4"
 			>
@@ -51,6 +52,34 @@ const currentPath = url.pathname;
 
 		<!-- for development -->
 		<ShowSizes />
+
+		<script>
+			const $header = document.querySelector(".web-header") as HTMLElement;
+
+			window.addEventListener("scroll", (e) => {
+				$header.classList.toggle("testing", window.scrollY > 300);
+				console.log(window.scrollY);
+			});
+		</script>
 	</body>
 </html>
-<style is:global></style>
+<style is:global>
+	body {
+		overflow-x: hidden;
+	}
+	header.web-header a {
+		color: white;
+		transition: all 0.5s;
+	}
+	header.web-header a.isActive {
+		color: rgb(37, 99, 235) !important;
+		font-weight: bold;
+	}
+	header.web-header {
+		background-color: transparent;
+		transition: all 0.5s;
+	}
+	header.web-header.testing {
+		background-color: rgb(25, 38, 97);
+	}
+</style>

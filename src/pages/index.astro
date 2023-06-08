@@ -1,32 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import Unidades from "../components/Unidades.astro";
+
+import { HEAD_TITLE } from "../const";
 ---
 
-<Layout title="Cursos | Carlos Lambarri" />
+<Layout title={HEAD_TITLE} />
 
-<section
-	id="hero"
-	class="flex items-center justify-center bg-[url('/back.webp')] w-screen h-screen bg-cover bg-no-repeat bg-top"
->
-	<div class="w-full h-full bg-[#061858]/80 flex items-center">
-		<div
-			class="md:w-full pl-10 flex flex-col items-start gap-y-4 h-96 lg:mx-auto lg:w-full lg:max-w-[1700px] lg:h-[450px] xl:h-[650px] xl:px-20"
-		>
-			<h2
-				class="text-white text-5xl font-semibold md:w-10/12 xl:w-2/3 lg:text-7xl xl:text-9xl"
-			>
-				Cursos de extensión universitaria
-			</h2>
-			<p
-				class="font-michroma text-blue-500 w-11/12 md:w-96 lg:w-[600px] xl:text-xl"
-			>
-				50 años de trayectoria en el campo de la tecnología de la información
-			</p>
-			<a
-				class="text-white bg-blue-600 mt-auto px-6 py-4 text-sm lg:text-lg xl:text-2xl"
-				href="#">Conoce más</a
-			>
-		</div>
-	</div>
-</section>
+<HeroSection />
+<Unidades />
+
 <style></style>
