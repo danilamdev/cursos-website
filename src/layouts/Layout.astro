@@ -57,7 +57,7 @@ const currentPath = url.pathname;
 			const $header = document.querySelector(".web-header") as HTMLElement;
 
 			window.addEventListener("scroll", (e) => {
-				$header.classList.toggle("testing", window.scrollY > 300);
+				$header.classList.toggle("testing", window.scrollY > 200);
 				console.log(window.scrollY);
 			});
 		</script>
@@ -69,7 +69,7 @@ const currentPath = url.pathname;
 	}
 	header.web-header a {
 		color: white;
-		transition: all 0.5s;
+		transition: all 0.3s;
 	}
 	header.web-header a.isActive {
 		color: rgb(37, 99, 235) !important;
@@ -77,9 +77,9 @@ const currentPath = url.pathname;
 	}
 	header.web-header {
 		background-color: transparent;
-		transition: all 0.5s;
+		transition: all 0.3s;
 	}
 	header.web-header.testing {
-		background-color: rgb(25, 38, 97);
+		background-color: #172046;
 	}
 </style>

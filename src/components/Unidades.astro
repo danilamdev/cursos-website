@@ -1,3 +1,52 @@
-<section id="unidades" class="h-screen grid place-content-center">
-  <h2 class="text-4xl">hola</h2>
+---
+import BAicon from "./icons/BAicon.astro";
+import BDicon from "./icons/BDicon.astro";
+import BIicon from "./icons/BIicon.astro";
+import PMicon from "./icons/PMicon.astro";
+
+import UnidadesCard from "./UnidadesCard.astro";
+---
+
+<section id="unidades" class="bg-slate-50 py-20 md:py-32 xl:py-52">
+  <div class="mx-auto w-max py-12 mb-10 lg:mb-20 xl:mb-28">
+    <p class="text-slate-600 text-xl md:text-2xl xl:text-3xl">Más de 30</p>
+    <h2
+      class="text-4xl font-bold text-slate-800 tracking-tight md:text-5xl xl:text-6xl lg:tracking-normal"
+    >
+      Unidades temáticas
+    </h2>
+  </div>
+
+  <div
+    class="w-10/12 mx-auto grid grid-cols-2 gap-y-7 md:h-96 md:w-3/5 lg:w-11/12 lg:grid-cols-4 lg:h-44 xl:max-w-5xl 2xl:max-w-6xl 2xl:h-52"
+  >
+    <UnidadesCard tema="Business Analytics" Icon={BAicon} />
+    <UnidadesCard tema="Big Data" Icon={BDicon} />
+    <UnidadesCard tema="Business Intelligence" Icon={BIicon} />
+    <UnidadesCard tema="Proyect Managment" Icon={PMicon} />
+    <!-- <article
+      class="flex flex-col gap-y-4 items-center text-center bg-white rounded-xl p-5 w-36 justify-self-center md:w-44 md:gap-y-7"
+    >
+      <BAicon classname="w-9 md:w-12" />
+      <p class="font-bold text-base md:text-lg">Business Analytics</p>
+    </article>
+    <article
+      class="flex flex-col gap-y-4 items-center text-center bg-white rounded-xl p-5 w-36 justify-self-center md:w-44 md:gap-y-7"
+    >
+      <BDicon classname="w-9 md:w-12" />
+      <p class="font-bold text-base md:text-lg">Big Data</p>
+    </article>
+    <article
+      class="flex flex-col gap-y-4 items-center text-center bg-white rounded-xl p-5 w-36 justify-self-center md:w-44 md:gap-y-7"
+    >
+      <BIicon classname="w-9 md:w-12" />
+      <p class="font-bold text-base md:text-lg">Business Intelligence</p>
+    </article>
+    <article
+      class="flex flex-col gap-y-4 items-center text-center bg-white rounded-xl p-5 w-36 justify-self-center md:w-44 md:gap-y-7"
+    >
+      <PMicon classname="w-9 md:w-12" />
+      <p class="font-bold text-base md:text-lg">Project Managment</p>
+    </article> -->
+  </div>
 </section>

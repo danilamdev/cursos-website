@@ -11,7 +11,7 @@ import { NAVLINKS } from "../const";
         const isActive = currentPath === link.href;
         // const activeStyles = isActive ? "font-bold text-blue-500" : "";
         return (
-          <li>
+          <li class="border-b-2 border-b-transparent transition-all duration-300 hover:border-blue-600 outline-">
             <a class={isActive ? "isActive" : ""} href={path}>
               {link.title}
             </a>
