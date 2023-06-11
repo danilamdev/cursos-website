@@ -21,22 +21,28 @@ import PcSVG from "./icons/PcSVG.astro";
     </p>
   </div>
 
-  <div class="grid grid-cols-2 mt-32 border bg-blue-950">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 mt-32 gap-x-2 lg:gap-x-10 bg-gradient-to-tr from-sky-700 to-blue-900"
+  >
     <article
-      class="text-right flex flex-col max-w-2xl self-center justify-self-end p-10 leading-10 text-white"
+      class="text-center text-sm px-5 md:text-sm md:leading-8 lg:text-base lg:leading-8 xl:text-lg md:text-right flex flex-col max-w-2xl self-center justify-self-end py-8 md:px-5 lg:p-10 leading-10 text-white"
     >
       <!-- <p>1</p> -->
-      <p>
+      <p class="mb-5 lg:mb-10">
         Dentro del campo de las tecnologías de la Información se han
         desarrollado en los últimos tiempos ciertas tecnologías, herramientas de
         software, investigaciones para optimizar el proceso de toma de
         decisiones en las Organizaciones.
       </p>
-      <p>
+
+      <p class="mb-5 lg:mb-10">
         Después de una trayectoria profesional de 50 años en TI y de más de 30
         años especializándome con los DSS (Decision Support Systems) presento a
-        Uds. el siguiente PROYECTO DE CURSOS DE EXTENSIÓN UNIVERSITARIA.
+        Uds. el siguiente <span class="font-bold text-sky-300"
+          >PROYECTO DE CURSOS DE EXTENSIÓN UNIVERSITARIA</span
+        >.
       </p>
+
       <p>
         El proyecto se centra en investigar y profundizar aspectos que hacen a
         los: Sistemas de Inteligencia (Business Intelligence), Analìtica
@@ -44,6 +50,12 @@ import PcSVG from "./icons/PcSVG.astro";
         Data Warehousing, Data Lakes, Data mining y Proyect Management
       </p>
     </article>
-    <div class="bg-green-300"></div>
+    <div class="bg-slate-400 hidden md:grid grid-cols-1 xl:grid-cols-2">
+      <div class="bg-teal-400 bg-[url('me.jpg')] bg-no-repeat bg-cover"></div>
+      <div class="hidden xl:block bg-gradient-to-tr from-blue-900 to-sky-500">
+      </div>
+    </div>
   </div>
+
+  <style></style>
 </section>
