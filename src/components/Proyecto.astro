@@ -1,5 +1,5 @@
 ---
-import ProyectSVG from "./ProyectSVG.astro";
+import ProyectSVG from "./icons/ProyectSVG.astro";
 ---
 
 <section id="proyecto" class="bg-white w-screen pb-16 2xl:pb-24">
@@ -46,12 +46,18 @@ import ProyectSVG from "./ProyectSVG.astro";
       </p>
     </div>
 
-    <div class="hidden md:block w-1/2">
+    <div class="hidden md:block w-1/2 relative">
+      <div class="absolute inset-0 bg-blue-800 mix-blend-screen"></div>
       <img
-        class="w-full h-full object-cover 2xl:object-[10%_30%]"
-        src="/imagen1.png"
+        class="w-full h-full object-cover object-left"
+        src="/imagen2.jpg"
         alt="imagen de proyecto de cursos por Carlos Lambarri"
+        loading="lazy"
       />
     </div>
   </div>
+  <a
+    class="font-bold text-lg mt-20 px-4 py-2 block w-max mx-auto border border-blue-500 text-blue-600 lg:mt-28 2xl:text-2xl"
+    href="/contacto">CONTACTO</a
+  >
 </section>
