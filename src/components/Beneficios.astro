@@ -3,5 +3,86 @@ import BeneficiosSVG from "./icons/BeneficiosSVG.astro";
 ---
 
 <section id="beneficios" class="py-14">
-  <BeneficiosSVG classname="w-52 mx-auto " />
+  <BeneficiosSVG classname="w-52 mx-auto lg:w-64 2xl:w-72 lg:mb-16" />
+
+  <div
+    class="max-w-5xl xl mx-auto w-11/12 pt-12 mb-10 lg:mb-20 xl:mb-28 2xl:mb-52 lg:pl-20"
+  >
+    <p
+      class="font-semibold text-slate-400 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl"
+    >
+      Beneficios
+    </p>
+    <h2
+      class="text-4xl font-bold text-blue-950 tracking-tight md:text-5xl xl:text-6xl lg:tracking-normal 2xl:text-7xl"
+    >
+      Impulsando el futuro de los estudiantes
+    </h2>
+  </div>
+
+  <div
+    class="grid-section w-72 md:w-3/4 mx-auto gap-5 lg:w-11/12 max-w-screen-2xl mb-20 xl:mb-40"
+  >
+    <article
+      class="shadow-lg shadow-blue-500/20 rounded-lg p-5 lg:p-8 flex flex-col gap-y-2 lg:gap-y-6"
+    >
+      <header class="font-bold text-lg lg:text-xl">Capacitación</header>
+      <p class="text-sm mt-5 leading-7 lg:text-base lg:leading-8">
+        Brindando capacitación en los últimos avances tecnológicos orientados al
+        soporte de decisiones de máximo interés en las organizaciones.
+      </p>
+    </article>
+    <article
+      class="shadow-lg shadow-blue-500/20 rounded-lg p-5 lg:p-8 flex flex-col gap-y-2 lg:gap-y-6v"
+    >
+      <header class="font-bold text-lg lg:text-xl">Especialización</header>
+      <p class="text-sm mt-5 leading-7 lg:text-base lg:leading-8">
+        Permitiendo a los alumnos su especialización en el Estado del Arte en
+        aquellos temas de pinta en las organizaciones.
+      </p>
+    </article>
+    <article
+      class="shadow-lg shadow-blue-500/20 rounded-lg p-5 lg:p-8 flex flex-col gap-y-2 lg:gap-y-6"
+    >
+      <header class="font-bold text-lg lg:text-xl">Actualización</header>
+      <p class="text-sm mt-5 leading-7 lg:text-base lg:leading-8">
+        Ofreciendo actualización del estado en que se encuentran las tecnologías
+        que conforman el vértice superior del conocimiento en el Management de
+        vanguardia.
+      </p>
+    </article>
+    <article
+      class="shadow-lg shadow-blue-500/20 rounded-lg p-5 lg:p-8 flex flex-col gap-y-2 lg:gap-y-6"
+    >
+      <header class="font-bold text-lg lg:text-xl">Oportunidad</header>
+      <p class="text-sm mt-5 leading-7 lg:text-base lg:leading-8">
+        Elevando el valor de tus estudiantes en el mercado laboral, el cual
+        crecerá ante la alta demanda que existe en estas especializaciones.
+      </p>
+    </article>
+  </div>
 </section>
+
+<div
+  class="bg-[url('fondo1.jpg')] bg-center py-20 lg:py-32 2xl:py-52 bg-cover relative isolate mb-52"
+>
+  <div class="bg-blue-800/70 absolute inset-0 -z-10"></div>
+  <p
+    class="text-center text-white font-bold text-lg md:text-xl md:px-5 lg:text-2xl lg:px-20 xl:text-3xl xl:leading-10 2xl:text-5xl 2xl:leading-[80px] 2xl:max-w-[1750px] mx-auto"
+  >
+    Elevá el nivel de tu universidad con cursos diseñados por un consultor con
+    trayectoria internacional en las temáticas y tendencias que requieren las
+    organizaciones modernas.
+  </p>
+</div>
+
+<style>
+  .grid-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .grid-section > article {
+    height: 300px;
+  }
+</style>
