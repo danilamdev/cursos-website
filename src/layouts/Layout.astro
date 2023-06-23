@@ -37,7 +37,7 @@ const currentPath = url.pathname;
 		<title>{title}</title>
 	</head>
 	<body class="font-poppins overflow-x-hidden">
-		<header class="web-header fixed top-0 w-full lg:py-2">
+		<header class="web-header fixed top-0 w-full lg:py-2 z-50">
 			<div
 				class="flex justify-between w-11/12 max-w-screen-2xl mx-auto items-center py-4 px-4"
 			>
@@ -63,6 +63,9 @@ const currentPath = url.pathname;
 	</body>
 </html>
 <style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
 	body {
 		overflow-x: hidden;
 	}
