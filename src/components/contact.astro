@@ -1,0 +1,98 @@
+---
+import Email from "./icons/email.astro";
+import Copy from "./icons/Copy.astro";
+---
+
+<section id="contact" class="py-10 bg-slate-50 pt-24 pb-20 2xl:pb-32 2xl:pt-52">
+  <div
+    class="w-11/12 md:w-1/2 lg:w-11/12 px-4 lg:grid-cols-2 lg:max-w-6xl mx-auto grid grid-cols-1 gap-y-10 lg:gap-x-16"
+  >
+    <div class="informacion flex flex-col pb-5 lg:pb-10">
+      <h2
+        class="text-4xl font-bold text-blue-950 tracking-tight mb-5 lg:text-6xl lg:mb-10 2xl:text-7xl lg:leading-[80px]"
+      >
+        Contáctame para más información
+      </h2>
+      <p class="text-sm text-slate-600 mb-10 lg:text-xl">
+        Envíame todas tus dudas, serán respondidas a la brevedad
+      </p>
+
+      <article
+        class="bg-slate-100 rounded-md px-3 py-3 flex items-center gap-2 mt-auto lg:gap-4"
+      >
+        <div class="bg-blue-500/70 p-1 rounded-md">
+          <Email classname="w-6 lg:w-9" />
+        </div>
+        <div class="text-xs lg:text-base">
+          <p>envíame un email a</p>
+          <span class="font-bold text-blue-600"
+            >carloslambarricursos@gmail.com</span
+          >
+        </div>
+
+        <div
+          class="bg-transparent hover:bg-slate-200 transition-colors p-2 rounded-md ml-auto"
+        >
+          <Copy classname="w-6" />
+        </div>
+      </article>
+    </div>
+
+    <div class="form">
+      <form class="space-y-7 px-5">
+        <div class="flex flex-col">
+          <label class="text-slate-700 text-sm lg:text-base" for="nombre"
+            >nombre</label
+          >
+          <input
+            class="bg-white rounded border border-slate-200 p-2 focus:outline focus:outline-blue-500"
+            type="text"
+            id="nombre"
+            name="nombre"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="flex flex-col">
+          <label class="text-slate-700 text-sm lg:text-base" for="email"
+            >email</label
+          >
+          <input
+            class="bg-white rounded border border-slate-200 p-2 focus:outline focus:outline-blue-500"
+            type="email"
+            id="email"
+            name="email"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="flex flex-col">
+          <label class="text-slate-700 text-sm lg:text-base" for="mensaje"
+            >mensaje</label
+          >
+          <textarea
+            class="bg-white rounded border border-slate-200 p-2 resize-none focus:outline focus:outline-blue-500"
+            id="mensaje"
+            name="mensaje"
+            required
+            aria-required="true"
+            rows="8"></textarea>
+        </div>
+
+        <button
+          class="text-center text-lg bg-blue-500 rounded w-full text-white py-3 hover:bg-blue-700"
+          >enviar</button
+        >
+
+        <p class="text-sm text-center text-slate-700">
+          o comunícate por <span class="text-green-400 font-bold"
+            ><a href="https://wa.me/+5491166271951" target="_blank">whatsapp</a
+            ></span
+          >
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
