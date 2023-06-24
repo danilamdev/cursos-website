@@ -3,8 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import { HEAD_TITLE } from "../const";
 ---
 
-<Layout title={`${HEAD_TITLE} | sobre mi`} />
-
-<div class="grid place-content-center h-screen">
-  <h2 class="text-4xl">hola soy sobre mi!</h2>
-</div>
+<Layout title={`${HEAD_TITLE} | sobre mi`}>
+  <header class="w-full py-9 fixed bg-[#172046]"></header>
+  <div class="grid place-content-center h-screen">
+    <h2 class="text-4xl">hola soy sobre mi!</h2>
+  </div>
+</Layout>

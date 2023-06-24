@@ -4,10 +4,8 @@ export default function ContactForm (){
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
     const formdata = new FormData(e.currentTarget)
-    // const data = Object.fromEntries(formdata)
-    // console.log(data)
+    
     try {
       response = await fetch('http://localhost:8787', {
         method: 'POST',

@@ -37,12 +37,17 @@ import Close from "./icons/Close.astro";
 </style>
 
 <script>
+  const $ulElem = document.querySelector("ul");
   const closeBtn = document.querySelector(".close-btn");
   const $checkBtn = document.querySelector(
     "input[type=checkbox]"
   ) as HTMLInputElement;
 
   closeBtn.addEventListener("click", () => {
+    $checkBtn.checked = false;
+  });
+
+  $ulElem.addEventListener("click", () => {
     $checkBtn.checked = false;
   });
 </script>
