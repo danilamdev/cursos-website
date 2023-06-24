@@ -42,4 +42,7 @@ export const beneficios = [
   },
 ];
 
+export const ADMIN = {
+  EMAIL: 'carloslambarricursos@gmail.com'
+}
 export const HEAD_TITLE = 'Carlos Lambarri'
