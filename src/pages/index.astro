@@ -7,18 +7,16 @@ import Proyecto from "../components/Proyecto.astro";
 import Me from "../components/Me.astro";
 import Beneficios from "../components/Beneficios.astro";
 import Contact from "../components/contact.astro";
-import Footer from "../components/Footer.astro";
 
 import { HEAD_TITLE } from "../const";
 ---
 
-<Layout title={HEAD_TITLE} />
-
-<HeroSection />
-<Unidades />
-<Stats />
-<Proyecto />
-<Me />
-<Beneficios />
-<Contact />
-<Footer />
+<Layout title={HEAD_TITLE}>
+  <HeroSection />
+  <Unidades />
+  <Stats />
+  <Proyecto />
+  <Me />
+  <Beneficios />
+  <Contact />
+</Layout>
