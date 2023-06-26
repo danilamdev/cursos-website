@@ -1,32 +1,22 @@
 import { toast } from "sonner"
+import { sendEmail } from "../services/sendEmail"
 
 export default function ContactForm (){
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     const formdata = new FormData(e.currentTarget)
+
+    toast.promise(sendEmail(formdata),{
+      loading: 'Loading...',
+      success: () => 'Mensaje enviado con exito',
+      error: 'Hubo un error. Intente nuevamente'
+      }
+    )
     
-    try {
-      response = await fetch('http://localhost:8787', {
-        method: 'POST',
-        body: formdata,
-        Headers: {
-          // 'Content-Type': 'application/json',
-          'Content-Type': 'multipart/form-data',
-          // "Access-Control-Allow-Origin": "*",
-        }
-      })
-
-      if(!response.ok) throw new Error('error enviando el mensaje. Intente nuevamente')
-       
-      const json = await response.json()
-
-
-    } catch (error) {
-      toast.error('Error al enviar el mensaje. Intente nuevamente.')
-    }
-
   }
+
+
   return (
     <div className="form">
           <form className="space-y-7 lg:px-5" onSubmit={handleSubmit}>
