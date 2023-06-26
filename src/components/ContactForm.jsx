@@ -1,18 +1,30 @@
 import { toast } from "sonner"
 import { sendEmail } from "../services/sendEmail"
+import { render } from "@react-email/render"
+
+import {EmailCursos} from '../../emails/index'
 
 export default function ContactForm (){
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const formdata = new FormData(e.currentTarget)
+
+    const formEl = e.currentTarget
+
+    const formdata = new FormData(formEl)
+    const {nombre, email, mensaje} = Object.fromEntries(formdata)
+
+    const html = render(<EmailCursos nombre={nombre} email={email} mensaje={mensaje} />)
+    formdata.append('html', html)
 
     toast.promise(sendEmail(formdata),{
-      loading: 'Loading...',
+      loading: 'Enviando mensaje...',
       success: () => 'Mensaje enviado con exito',
       error: 'Hubo un error. Intente nuevamente'
       }
     )
+
+    formEl.reset()
     
   }
 
