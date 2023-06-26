@@ -10,7 +10,7 @@ export const sendEmail =  (formdata) => {
     }
   }
  
-    return fetch('http://localhost:8787', fetchOptions )
+    return fetch('https://cursos-worker.danilamdev.workers.dev/', fetchOptions )
       .then(response => response.json())
 
 }

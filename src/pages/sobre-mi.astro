@@ -5,7 +5,42 @@ import { HEAD_TITLE } from "../const";
 
 <Layout title={`${HEAD_TITLE} | sobre mi`}>
   <header class="w-full py-9 fixed bg-[#172046]"></header>
-  <div class="grid place-content-center h-screen">
-    <h2 class="text-4xl">hola soy sobre mi!</h2>
-  </div>
+  <section class="w-screen h-max bg-slate-100 py-36 text-center">
+    <div class="max-w-xl mx-auto">
+      <div
+        class="w-1/2 max-w-sm flex flex-col items-center gap-y-4 mx-auto mb-12 lg:gap-y-10"
+      >
+        <img
+          loading="lazy"
+          src="/me.avif"
+          alt="imagen de Carlos Lambarri, creador de los cursos de extension"
+          class="w-24 h-24 rounded-full object-cover object-top border-4 border-transparent mx-auto outline outline-blue-800 mb-5 lg:w-36 lg:h-36"
+        />
+        <p class="font-bold text-md -mb-2 text-indigo-500 lg:-mb-7 lg:text-xl">
+          Ing. Carlos Lambarri
+        </p>
+        <p class="text-xs text-center text-slate-500">
+          Especialista en Business intelligence Business Analytics & Big Data
+          UNDP-UNIDO
+        </p>
+      </div>
+      <!-- <h2 class="text-3xl font-bold text-white">hola soy sobre mi!</h2> -->
+      <p class="px-4 mb-16 leading-9 lg:mb-28">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+        blanditiis eos iure culpa veniam ullam optio, sapiente dolores
+        provident? Obcaecati ipsam voluptates delectus quam cum doloribus minima
+        non sequi quisquam ea. Aliquam error ad incidunt vitae distinctio. Ut,
+        quae recusandae. Accusantium maxime officiis fugit vero, neque numquam
+        voluptatem dolores pariatur quis! Laborum, sapiente voluptatibus.
+        Molestias repudiandae totam, adipisci obcaecati quibusdam debitis
+        eveniet harum magni aperiam quod incidunt asperiores vitae iusto?
+      </p>
+      <a
+        href="/cv.pdf"
+        target="_blank"
+        class="font-semibold text-white px-4 py-4 rounded bg-blue-600 hover:bg-blue-700"
+        >Curriculum</a
+      >
+    </div>
+  </section>
 </Layout>
