@@ -24,21 +24,29 @@ export const beneficios = [
     title: "Capacitación",
     content:
       "Brindando capacitación en los últimos avances tecnológicos orientados al soporte de decisiones de máximo interés en las organizaciones.",
+    icon: '/capacitacion.svg',
+    alt: 'icono de capacitacion'
   },
   {
     title: "Especialización",
     content:
       "Permitiendo a los alumnos su especialización en el Estado del Arte en aquellos temas de pinta en las organizaciones.",
+    icon: '/especializacion.svg',
+    alt: 'icono de especializacion'
   },
   {
     title: "Actualización",
     content:
       "Ofreciendo actualización del estado en que se encuentran las tecnologías que conforman el vértice superior del conocimiento en el Management de  vanguardia.",
+    icon: '/actualizacion.svg',
+    alt: 'icono de actualizacion'
   },
   {
     title: "Oportunidad",
     content:
       "Elevando el valor de tus estudiantes en el mercado laboral, el cual crecerá ante la alta demanda que existe en estas especializaciones.",
+    icon: '/oportunidad.svg',
+    alt: 'icono de oportunidad'
   },
 ];
 
