@@ -1,0 +1,74 @@
+---
+import Logo from "./logo.astro";
+
+import Whatsapp from "./icons/Whatsapp.astro";
+import Linkedin from "./icons/Linkedin.astro";
+import Email2 from "./icons/Email2.astro";
+---
+
+<footer class="bg-[#07143F] pt-24 lg:pt-36">
+  <div
+    class="pl-10 flex flex-col gap-y-16 mb-24 xl:mb-36 lg:flex-row lg:gap-x-14 lg:max-w-6xl 2xl:max-w-screen-2xl 2xl:gap-x-24 mx-auto"
+  >
+    <!-- LOGO -->
+    <div class="flex flex-col w-52 md:w-60 xl:w-72 gap-y-2 xl:gap-y-10">
+      <Logo size="lg" responsive />
+      <div class="text-[#8693B5] text-xs md:text-sm xl:text-base">
+        <p class="font-bold mb-2">Ing. Carlos Lambarri</p>
+        <p>
+          Especialista en Business intelligence Business Analytics & Big Data
+          UNDP-UNIDO
+        </p>
+      </div>
+    </div>
+
+    <!-- QUICKLINKS -->
+    <div
+      class="text-[#8693B5] flex flex-col gap-y-6 xl:gap-y-10 text-xs md:text-sm xl:text-base lg:ml-auto"
+    >
+      <h4 class="font-bold text-blue-500">QUICK LINKS</h4>
+      <p><a href="/cursos">Cursos</a></p>
+      <a href="/cv.pdf" target="_blank">Curriculum</a>
+    </div>
+
+    <!-- NAVEGACION -->
+    <div
+      class="text-[#8693B5] flex flex-col gap-y-6 xl:gap-y-10 text-xs md:text-sm xl:text-base"
+    >
+      <h4 class="font-bold text-blue-500">NAVEGACIÓN</h4>
+      <p><a href="/#hero">Home</a></p>
+      <p><a href="/sobre-mi">Sobre mi</a></p>
+      <p><a href="/#contact">Contacto</a></p>
+    </div>
+
+    <!-- SOCIAL MEDIA -->
+    <div
+      class="text-[#8693B5] flex flex-col gap-y-6 xl:gap-y-10 text-xs md:text-sm xl:text-base [&>div]:flex [&>div]:items-center [&>div]:gap-x-2"
+    >
+      <h4 class="font-bold text-blue-500">SOCIAL MEDIA</h4>
+      <div>
+        <Whatsapp classname="w-5" />
+        <p>+5491164581216</p>
+      </div>
+      <div>
+        <Linkedin classname="w-5" />
+        <p>/lambarri</p>
+      </div>
+      <div>
+        <Email2 classname="w-5" />
+        <p>carloslambarricursos@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center text-xs py-8">
+    <p class="text-[#8693B5]">2023 - Derechos reservados Carlos Lambarri</p>
+    <p class="block text-slate-500">
+      sitio realizado por <a
+        class="underline text-blue-400/70"
+        href="https://www.danilamdev.com"
+        target="_blank">@danilamdev</a
+      >
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,10 @@
+---
+const { tema, Icon } = Astro.props;
+---
+
+<article
+  class="shadow-xl shadow-blue-500/10 flex flex-col gap-y-4 items-center text-center bg-white rounded-xl p-5 w-36 justify-self-center md:w-44 md:gap-y-7 xl:w-52 xl:gap-y-10"
+>
+  <Icon classname="w-9 md:w-12" />
+  <p class="font-bold text-base md:text-lg">{tema}</p>
+</article>

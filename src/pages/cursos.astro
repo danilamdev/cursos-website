@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { HEAD_TITLE } from "../const";
+
+import { getNotionDb } from "../services/getNotionDb.js";
+import {
+  Card,
+  Title,
+  Text,
+  Flex,
+  Table,
+  TableRow,
+  TableCell,
+  TableHead,
+  TableHeaderCell,
+  TableBody,
+  Badge,
+} from "@tremor/react";
+
+type Data = {
+  cursos: number;
+  transparencias: number;
+  horas: number;
+  unidad: string;
+};
+
+const resultados: Data[] = await getNotionDb();
+
+const sortedResults = resultados.sort((a, b) =>
+  a.unidad.localeCompare(b.unidad)
+);
+
+const totales = resultados.reduce(
+  (acc, curr) => {
+    acc.cursos += curr.cursos;
+    acc.horas += curr.horas;
+    acc.transparencias += curr.transparencias;
+
+    return acc;
+  },
+  { cursos: 0, transparencias: 0, horas: 0 }
+);
+---
+
+<Layout title={`${HEAD_TITLE} | Unidades Temáticas`}>
+  <div class="w-screen h-96 bg-black"></div>
+  <section class="bg-slate-100">
+    <div class="max-w-7xl mx-auto py-24">
+      <Card>
+        <Flex justifyContent="start" className="space-x-2">
+          <h2 class="font-bold text-2xl text-slate-700">Unidades Temáticas</h2>
+          <Badge color="emerald" size="xs">
+            {sortedResults.length} unidades
+          </Badge>
+        </Flex>
+        <Text className="mt-2">
+          Tabla con información sobre cada unidad temática.
+        </Text>
+        <Table className="mt-6">
+          <TableHead>
+            <TableRow>
+              <TableHeaderCell>UNIDAD</TableHeaderCell>
+              <TableHeaderCell>CURSOS</TableHeaderCell>
+              <TableHeaderCell>TRANSPARENCIAS</TableHeaderCell>
+              <TableHeaderCell>HORAS CATEDRA</TableHeaderCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {
+              sortedResults.map((data, i) => (
+                <TableRow key={i}>
+                  <TableCell>{data.unidad}</TableCell>
+                  <TableCell>{data.cursos}</TableCell>
+                  <TableCell>{data.transparencias}</TableCell>
+                  <TableCell>{data.horas}</TableCell>
+                </TableRow>
+              ))
+            }
+            <TableRow>
+              <TableCell><Title>TOTALES</Title></TableCell>
+              <TableCell className="font-bold text-blue-500 text-lg">
+                {totales.cursos}
+              </TableCell>
+              <TableCell className="font-bold text-blue-500 text-lg">
+                {totales.transparencias}
+              </TableCell>
+              <TableCell className="font-bold text-blue-500 text-lg">
+                {totales.horas}
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </Card>
+    </div>
+  </section>
+</Layout>

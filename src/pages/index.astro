@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+<<<<<<< HEAD
 ---
 
 <Layout title="Carlos Lambarri">
@@ -15,4 +16,28 @@ import Layout from "../layouts/Layout.astro";
 			próximamente
 		</h4>
 	</main>
+=======
+import HeroSection from "../components/HeroSection.astro";
+import Unidades from "../components/Unidades.astro";
+import Stats from "../components/Stats.astro";
+import Proyecto from "../components/Proyecto.astro";
+import Me from "../components/Me.astro";
+import Beneficios from "../components/Beneficios.astro";
+// import Contact from "../components/contact.astro";
+import Contact from "../components/Contact.jsx";
+
+import { HEAD_TITLE } from "../const";
+---
+
+<Layout title={HEAD_TITLE}>
+  <HeroSection />
+  <Unidades />
+  <Stats />
+  <Proyecto />
+  <Me />
+  <Beneficios />
+  <!-- <Contact /> -->
+
+  <Contact client:visible />
+>>>>>>> website
 </Layout>
