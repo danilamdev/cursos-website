@@ -5,17 +5,6 @@ module.exports = {
     "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}",
   ],
 	theme: {
-<<<<<<< HEAD
-		extend: {
-			fontFamily: {
-				poppins: ['poppins', 'sans-serif'],
-				mich: ['michroma', 'sans-serif']
-			}
-		},
-	},
-	plugins: [],
-}
-=======
 		transparent: "transparent",
     current: "currentColor",
 		extend: {
@@ -140,4 +129,4 @@ module.exports = {
   plugins: [require("@headlessui/tailwindcss")],
 };
 	
->>>>>>> website
+
