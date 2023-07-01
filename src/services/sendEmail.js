@@ -9,8 +9,10 @@ export const sendEmail =  (formdata) => {
       // "Access-Control-Allow-Origin": "*",
     }
   }
- 
+
     return fetch('https://cursos-worker.danilamdev.workers.dev/', fetchOptions )
-      .then(response => response.json())
+      .then(response => {
+        return response.json()
+      })
 
 }

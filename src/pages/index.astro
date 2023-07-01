@@ -1,22 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-<<<<<<< HEAD
----
-
-<Layout title="Carlos Lambarri">
-	<main class="lg:pl-24 xl:pl-52">
-		<p class="text-white text-2xl font-semibold">
-			<span class="text-blue-500">Carlos.</span>
-			<span>Lambarri.</span>
-		</p>
-		<h2 class="text-6xl text-white w-96 font-semibold lg:text-7xl xl:text-8xl">
-			Sitio en contrucción
-		</h2>
-		<h4 class="font-mich text-xl text-blue-500 mt-4 lg:text-2xl xl:text-4xl">
-			próximamente
-		</h4>
-	</main>
-=======
 import HeroSection from "../components/HeroSection.astro";
 import Unidades from "../components/Unidades.astro";
 import Stats from "../components/Stats.astro";
@@ -30,14 +13,13 @@ import { HEAD_TITLE } from "../const";
 ---
 
 <Layout title={HEAD_TITLE}>
-  <HeroSection />
-  <Unidades />
-  <Stats />
-  <Proyecto />
-  <Me />
-  <Beneficios />
-  <!-- <Contact /> -->
+	<HeroSection />
+	<Unidades />
+	<Stats />
+	<Proyecto />
+	<Me />
+	<Beneficios />
+	<!-- <Contact /> -->
 
-  <Contact client:visible />
->>>>>>> website
+	<Contact client:visible />
 </Layout>
