@@ -13,11 +13,11 @@ import {
 
 
 
-export const EmailCursos = ({ nombre='daniel', email='dalambarri@hotmail.com', mensaje='hola como estas'}) => (
+export const EmailCursos = ({ nombre, email, mensaje}) => (
       <Tailwind>
         <Html>
           <Head />
-          <Preview>Log in with this magic link</Preview>
+          <Preview>Nuevo mensaje en Cursos de extensión</Preview>
 
           <Body className='container bg-white font-sans py-20'>
             <Container className='bg-slate-50/40 rounded-lg p-10'>
