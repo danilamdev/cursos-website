@@ -4,6 +4,7 @@ module.exports = {
     './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
     "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode:'class',
 	theme: {
 		transparent: "transparent",
     current: "currentColor",

@@ -56,7 +56,7 @@ const currentPath = url.pathname;
 
 		<Footer />
 		<!-- for development -->
-		<!-- <ShowSizes /> -->
+		<ShowSizes />
 
 		<script>
 			const $header = document.querySelector(".web-header") as HTMLElement;
@@ -64,6 +64,13 @@ const currentPath = url.pathname;
 			window.addEventListener("scroll", (e) => {
 				$header.classList.toggle("testing", window.scrollY > 200);
 			});
+
+			const darkmode = window.matchMedia(
+				"(prefers-color-scheme: dark)"
+			).matches;
+			console.log("darkmode", darkmode);
+
+			document.documentElement.classList.toggle("dark", darkmode);
 		</script>
 	</body>
 </html>
