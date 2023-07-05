@@ -4,6 +4,8 @@ import Logo from "./logo.astro";
 import Whatsapp from "./icons/Whatsapp.astro";
 import Linkedin from "./icons/Linkedin.astro";
 import Email2 from "./icons/Email2.astro";
+
+import { ADMIN } from "../const";
 ---
 
 <footer class="bg-[#07143F] pt-24 lg:pt-36">
@@ -24,7 +26,7 @@ import Email2 from "./icons/Email2.astro";
 
     <!-- QUICKLINKS -->
     <div
-      class="text-[#8693B5] flex flex-col gap-y-6 xl:gap-y-10 text-xs md:text-sm xl:text-base lg:ml-auto"
+      class="text-zinc-200 flex flex-col gap-y-6 xl:gap-y-10 text-sm md:text-md xl:text-lg lg:ml-auto"
     >
       <h4 class="font-bold text-blue-500">QUICK LINKS</h4>
       <p><a href="/cursos">Cursos</a></p>
@@ -33,7 +35,7 @@ import Email2 from "./icons/Email2.astro";
 
     <!-- NAVEGACION -->
     <div
-      class="text-[#8693B5] flex flex-col gap-y-6 xl:gap-y-10 text-xs md:text-sm xl:text-base"
+      class="text-zinc-200 flex flex-col gap-y-6 xl:gap-y-10 text-sm md:text-md xl:text-lg"
     >
       <h4 class="font-bold text-blue-500">NAVEGACIÓN</h4>
       <p><a href="/#hero">Home</a></p>
@@ -43,20 +45,20 @@ import Email2 from "./icons/Email2.astro";
 
     <!-- SOCIAL MEDIA -->
     <div
-      class="text-[#8693B5] flex flex-col gap-y-6 xl:gap-y-10 text-xs md:text-sm xl:text-base [&>div]:flex [&>div]:items-center [&>div]:gap-x-2"
+      class="text-zinc-200 flex flex-col gap-y-6 xl:gap-y-10 text-sm md:text-md xl:text-lg [&>div]:flex [&>div]:items-center [&>div]:gap-x-2"
     >
       <h4 class="font-bold text-blue-500">SOCIAL MEDIA</h4>
       <div>
-        <Whatsapp classname="w-5" />
+        <Whatsapp classname="w-6" />
         <p>+5491164581216</p>
       </div>
       <div>
-        <Linkedin classname="w-5" />
+        <Linkedin classname="w-6" />
         <p>/lambarri</p>
       </div>
       <div>
-        <Email2 classname="w-5" />
-        <p>carloslambarricursos@gmail.com</p>
+        <Email2 classname="w-6" />
+        <p>{ADMIN.EMAIL}</p>
       </div>
     </div>
   </div>

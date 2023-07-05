@@ -6,20 +6,21 @@ import Stats from "../components/Stats.astro";
 import Proyecto from "../components/Proyecto.astro";
 import Me from "../components/Me.astro";
 import Beneficios from "../components/Beneficios.astro";
-// import Contact from "../components/contact.astro";
 import Contact from "../components/Contact.jsx";
+
+import Eleva from "../components/Eleva.astro";
 
 import { HEAD_TITLE } from "../const";
 ---
 
 <Layout title={HEAD_TITLE}>
 	<HeroSection />
+	<Eleva />
+	<Proyecto />
 	<Unidades />
 	<Stats />
-	<Proyecto />
-	<Me />
+	<!-- <Me /> -->
 	<Beneficios />
-	<!-- <Contact /> -->
 
 	<Contact client:visible />
 </Layout>

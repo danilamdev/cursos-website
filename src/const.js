@@ -10,11 +10,11 @@ export const stats = [
     title: "cursos",
   },
   {
-    number: "110K+",
+    number: "32K+",
     title: "Proyecciones",
   },
   {
-    number: "18K+",
+    number: "1.6K+",
     title: "Horas cátedra",
   },
 ];
@@ -30,21 +30,21 @@ export const beneficios = [
   {
     title: "Especialización",
     content:
-      "Permitiendo a los alumnos su especialización en el Estado del Arte en aquellos temas de pinta en las organizaciones.",
+      "Permitiendo a los alumnos su especialización en el Estado del Arte en aquellos temas de punta en las organizaciones.",
     icon: '/especializacion.svg',
     alt: 'icono de especializacion'
   },
   {
     title: "Actualización",
     content:
-      "Ofreciendo actualización del estado en que se encuentran las tecnologías que conforman el vértice superior del conocimiento en el Management de  vanguardia.",
+      "Ofreciendo actualización del estado en que se encuentran las tecnologías que conforman el vértice superior del conocimiento en el Management de vanguardia.",
     icon: '/actualizacion.svg',
     alt: 'icono de actualizacion'
   },
   {
     title: "Oportunidad",
     content:
-      "Elevando el valor de tus estudiantes en el mercado laboral, el cual crecerá ante la alta demanda que existe en estas especializaciones.",
+      "Elevando el valor de sus estudiantes en el mercado laboral, el cual crecerá ante la alta demanda que existe en estas especializaciones.",
     icon: '/oportunidad.svg',
     alt: 'icono de oportunidad'
   },
