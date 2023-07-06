@@ -50,7 +50,11 @@ import { ADMIN } from "../const";
       <h4 class="font-bold text-blue-500">SOCIAL MEDIA</h4>
       <div>
         <Whatsapp classname="w-6" />
-        <p>+5491164581216</p>
+        <p>
+          <a href="https://wa.me/+5491166271951" target="_blank"
+            >+5491166271951</a
+          >
+        </p>
       </div>
       <div>
         <Linkedin classname="w-6" />
@@ -58,7 +62,7 @@ import { ADMIN } from "../const";
       </div>
       <div>
         <Email2 classname="w-6" />
-        <p>{ADMIN.EMAIL}</p>
+        <p><a href={`mailto:${ADMIN.EMAIL}}`}>{ADMIN.EMAIL}</a></p>
       </div>
     </div>
   </div>

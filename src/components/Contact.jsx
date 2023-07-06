@@ -37,10 +37,10 @@ export default function Contact () {
           <h2
             className="text-4xl font-bold text-blue-950 tracking-tight mb-5 lg:text-6xl lg:mb-10 2xl:text-7xl lg:leading-[80px]"
           >
-            Contáctame para más información
+            Contácteme para más información
           </h2>
           <p className="text-sm text-slate-600 mb-10 lg:text-xl">
-            Envíame todas tus dudas, serán respondidas a la brevedad
+            Envíeme todas sus dudas, serán respondidas a la brevedad
           </p>
 
           <article
@@ -50,8 +50,8 @@ export default function Contact () {
               <EmailIcon classname="w-6 lg:w-9" />
             </div>
             <div className="text-xs lg:text-base">
-              <p>envíame un email a</p>
-              <span className="font-bold text-blue-600"><a href={`mailto:${ADMIN.EMAIL}}`}>carloslambarricursos@gmail.com </a></span>
+              <p>envíe un email a</p>
+              <span className="font-bold text-blue-600"><a href={`mailto:${ADMIN.EMAIL}}`}>{ADMIN.EMAIL}</a></span>
             </div>
 
             <button 

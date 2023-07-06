@@ -2,7 +2,7 @@ import { toast } from "sonner"
 import { sendEmail } from "../services/sendEmail"
 import { render } from "@react-email/render"
 
-import {EmailCursos} from '../../emails/index'
+import { EmailCursos } from '../../emails/index'
 
 export default function ContactForm (){
 
