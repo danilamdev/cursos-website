@@ -15,6 +15,8 @@ const requestUrl = Astro.request.url;
 const url = new URL(requestUrl);
 
 const currentPath = url.pathname;
+
+console.log(currentPath);
 ---
 
 <!DOCTYPE html>
@@ -56,7 +58,8 @@ const currentPath = url.pathname;
 			</div>
 		</header>
 		<slot />
-
+		<pre
+			class="fixed top-16 left-5 text-orange-500 font-bold">{JSON.stringify(currentPath)}</pre>
 		<Footer />
 		<!-- for development -->
 		<!-- <ShowSizes /> -->
@@ -71,7 +74,6 @@ const currentPath = url.pathname;
 			const darkmode = window.matchMedia(
 				"(prefers-color-scheme: dark)"
 			).matches;
-			console.log("darkmode", darkmode);
 
 			document.documentElement.classList.toggle("dark", darkmode);
 		</script>
