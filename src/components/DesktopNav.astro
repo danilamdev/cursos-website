@@ -8,8 +8,9 @@ import { NAVLINKS } from "../const";
   <ul class="flex items-center text-md gap-x-10 xl:text-lg 2xl:gap-x-14">
     {
       Object.entries(NAVLINKS).map(([path, link]) => {
-        const isActive = currentPath === link.href;
-        // const activeStyles = isActive ? "font-bold text-blue-500" : "";
+        const isActive =
+          currentPath === link.href || currentPath === `${link.href}/`;
+
         return (
           <li class="border-b-2 border-b-transparent transition-all duration-300 hover:border-blue-600 outline-">
             <a class={isActive ? "isActive" : ""} href={path}>
