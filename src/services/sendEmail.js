@@ -1,4 +1,4 @@
-export const sendEmail =  (formdata) => {
+export const sendEmail = (formdata) => {
 
   const fetchOptions = {
     method: 'POST',
@@ -10,9 +10,9 @@ export const sendEmail =  (formdata) => {
     }
   }
 
-    return fetch('https://cursos-worker.danilamdev.workers.dev/', fetchOptions )
-      .then(response => {
-        return response.json()
-      })
+  return fetch('https://cursos-worker.danilamdev.workers.dev/', fetchOptions)
+    .then(response => {
+      return response.json()
+    })
 
 }

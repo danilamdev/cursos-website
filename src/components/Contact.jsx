@@ -22,8 +22,6 @@ export default function Contact () {
       setIsCopy(false)
     }, 1500);
     
-
-    console.log(ADMIN.EMAIL)
   }
 
   return (

@@ -1,9 +1,4 @@
 ---
-import BAicon from "./icons/BAicon.astro";
-import BDicon from "./icons/BDicon.astro";
-import BIicon from "./icons/BIicon.astro";
-import PMicon from "./icons/PMicon.astro";
-
 import UnidadesCard from "./UnidadesCard.astro";
 ---
 
@@ -26,11 +21,26 @@ import UnidadesCard from "./UnidadesCard.astro";
   </div>
 
   <div
-    class="w-10/12 mx-auto grid grid-cols-2 gap-y-7 md:h-96 md:w-3/5 lg:w-11/12 lg:grid-cols-4 lg:h-44 xl:max-w-5xl 2xl:max-w-6xl 2xl:h-52"
+    class="w-10/12 mx-auto grid grid-cols-2 md:grid-cols-autoFit gap-4 lg:gap-7 xl:gap-10 max-w-screen-2xl"
   >
-    <UnidadesCard tema="Business Analytics" Icon={BAicon} />
-    <UnidadesCard tema="Big Data" Icon={BDicon} />
-    <UnidadesCard tema="Business Intelligence" Icon={BIicon} />
-    <UnidadesCard tema="Proyect Management" Icon={PMicon} />
+    <a href="/cursos">
+      <UnidadesCard tema="Business Analytics" imagen="/BA.png" />
+    </a>
+    <a href="/cursos">
+      <UnidadesCard tema="Big Data" imagen="/BD.png" />
+    </a>
+    <a href="/cursos">
+      <UnidadesCard tema="Business Intelligence" imagen="/BI.png" />
+    </a>
+    <a href="/cursos">
+      <UnidadesCard tema="Proyect Management" imagen="PM.png" />
+    </a>
   </div>
 </section>
+
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+</style>

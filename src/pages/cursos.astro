@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import { HEAD_TITLE } from "../const";
 
+import Scroll from "../components/icons/Scroll.astro";
+
 import { getNotionDb } from "../services/getNotionDb.js";
 import {
   Card,
@@ -43,7 +45,14 @@ const totales = resultados.reduce(
 ---
 
 <Layout title={`${HEAD_TITLE} | Unidades Temáticas`}>
-  <div class="w-screen h-96 bg-black"></div>
+  <div class="w-screen h-96 bg-black relative">
+    <img
+      src="/back-cursos.webp"
+      alt="fondo de página cursos"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/70"></div>
+  </div>
   <section class="bg-slate-100 dark:bg-slate-950">
     <div class="max-w-7xl mx-auto py-24">
       <Card>
@@ -56,7 +65,13 @@ const totales = resultados.reduce(
         <Text className="mt-2">
           Tabla con información sobre cada unidad temática.
         </Text>
-        <Table className="mt-6">
+        <div
+          class="rounded-full animate-[slide_2s_infinite] ml-auto w-10 pr-5 md:hidden"
+        >
+          <Scroll classname="w-8 fill-slate-400 mt-5" />
+        </div>
+
+        <Table className="">
           <TableHead>
             <TableRow>
               <TableHeaderCell>UNIDAD</TableHeaderCell>
@@ -65,6 +80,7 @@ const totales = resultados.reduce(
               <TableHeaderCell>HORAS CATEDRA</TableHeaderCell>
             </TableRow>
           </TableHead>
+
           <TableBody>
             {
               sortedResults.map((data, i) => (
@@ -94,3 +110,17 @@ const totales = resultados.reduce(
     </div>
   </section>
 </Layout>
+
+<style>
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+</style>

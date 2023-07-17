@@ -3,10 +3,19 @@ import ProyectSVG from "./icons/ProyectSVG.astro";
 ---
 
 <section id="proyecto" class="bg-white w-screen pb-16 2xl:pb-24">
-  <ProyectSVG
+  <!-- <ProyectSVG
     classname="mx-auto mt-16 md:w-44 md:mt-24 w-36 lg:w-52 lg:mt-32 2xl:w-80 2xl:mt-60 2xl:mb-10 "
-  />
-  <div class="mx-auto w-max pt-12 mb-10 lg:mb-20 xl:mb-28 2xl:mb-52">
+  /> -->
+  <div
+    class="w-10/12 max-w-4xl aspect-video mx-auto mt-10 rounded-lg overflow-hidden saturate-50 shadow-lg shadow-black/40"
+  >
+    <img
+      src="proyecto.png"
+      alt="imagen de proyecto"
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <div class="mx-auto w-max pt-12 mb-10 lg:mb-20 xl:mb-28 2xl:mb-32">
     <p
       class="font-semibold text-slate-400 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl"
     >
@@ -58,7 +67,7 @@ import ProyectSVG from "./icons/ProyectSVG.astro";
     </div>
   </div>
   <a
-    class="font-bold text-lg mt-20 px-4 py-2 block w-max mx-auto border border-blue-500 text-blue-600 lg:mt-28 2xl:text-2xl"
+    class="font-bold text-lg mt-20 px-4 py-2 block w-max mx-auto border border-blue-500 text-blue-600 lg:mt-28 2xl:text-2xl hover:bg-blue-600 hover:text-white transition-colors"
     href="/#contact">CONTACTO</a
   >
 </section>

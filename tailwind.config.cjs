@@ -9,6 +9,9 @@ module.exports = {
 		transparent: "transparent",
     current: "currentColor",
 		extend: {
+      gridTemplateColumns: {
+        'autoFit': 'repeat(auto-fit, minmax(200px, 1fr))',
+        },
 			fontFamily: {
 				poppins:['poppins', 'sans-serif'],
 				michroma:['michroma', 'sans-serif']

@@ -1,10 +1,21 @@
 ---
-const { tema, Icon } = Astro.props;
+const { tema, imagen } = Astro.props;
 ---
 
 <article
-  class="shadow-xl shadow-blue-500/10 flex flex-col gap-y-4 items-center text-center bg-white rounded-xl p-5 w-36 justify-self-center md:w-44 md:gap-y-7 xl:w-52 xl:gap-y-10"
+  class="shadow-xl shadow-blue-500/10 text-center bg-white rounded-lg aspect-[16/12] overflow-hidden relative group"
 >
-  <Icon classname="w-9 md:w-12" />
-  <p class="font-bold text-base md:text-lg">{tema.toUpperCase()}</p>
+  <img
+    src={imagen}
+    alt={tema}
+    class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+  />
+  <!-- <Icon classname="w-9 md:w-12" /> -->
+  <div
+    class="absolute z-20 inset-0 bg-black/50 grid place-content-center group-hover:bg-black/70 transition-colors"
+  >
+    <p class="font-bold text-xl lg:text-2xl text-white">
+      {tema.toUpperCase()}
+    </p>
+  </div>
 </article>
