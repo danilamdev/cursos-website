@@ -53,6 +53,8 @@ export default function Contact () {
             </div>
 
             <button 
+              id='copy button'
+              aria-label='botón copiar email'
               onClick={handleClick}
               className="bg-transparent hover:bg-slate-200 transition-colors w-12 h-12 ml-auto grid place-content-center rounded-full"
             >
